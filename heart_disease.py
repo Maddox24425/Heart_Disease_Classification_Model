@@ -32,7 +32,7 @@ st.markdown(data)
 
 st.image('https://www.shutterstock.com/image-vector/abstract-blue-human-heart-red-600nw-2526983201.jpg')
 
-url='''https://github.com/Maddox24425/Heart_Disease_Classification_Model/blob/main/lr_model.pkl'''
+url='''https://github.com/Maddox24425/Heart_Disease_Classification_Model/blob/main/lr_model.pkl?raw=true'''
 with open(url,'rb') as f:
     chatgpt = pickle.load(f)
 
