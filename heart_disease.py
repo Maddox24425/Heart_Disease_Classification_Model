@@ -32,11 +32,11 @@ st.markdown(data)
 
 st.image('https://www.shutterstock.com/image-vector/abstract-blue-human-heart-red-600nw-2526983201.jpg')
 
-with open('heart_disease_pred.pkl','rb') as f:
+with open('lr_model.pkl','rb') as f:
     chatgpt = pickle.load(f)
 
 # Load data
-url = '''https://github.com/ankitmisk/Heart_Disease_Prediction_ML_Model/blob/main/heart.csv?raw=true'''
+url = '''https://github.com/Maddox24425/Heart_Disease_Classification_Model/blob/main/heart.csv?raw=true'''
 df = pd.read_csv(url)
 
 
@@ -84,4 +84,4 @@ else:
     progress_bar = st.progress(0)
 
 
-st.markdown('Designed by: **Ankit Mishra**')
+st.markdown('Designed by: **Farhan Khan**')
