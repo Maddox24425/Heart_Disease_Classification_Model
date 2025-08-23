@@ -36,7 +36,7 @@ st.subheader(data)
 st.image('https://t-shikuro.github.io/images/heart/heart.gif')
 
 # ✅ Load CSV from the same folder
-csv_path = os.path.join(os.path.dirname(__file__), "Heart_Disease_Classification_Model/Source","heart.csv")
+csv_path = "heart.csv"
 df = pd.read_csv(csv_path)
 
 st.sidebar.header("Select feature to predict heart disease")
