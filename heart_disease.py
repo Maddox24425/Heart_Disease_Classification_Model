@@ -30,12 +30,13 @@ Algorithms Used:
 st.markdown(data)
 
 
-st.image('https://tse4.mm.bing.net/th/id/OIP.7LA1z7w-drtQmnFmC0KBNAHaE7?cb=thfvnext&pid=ImgDet&w=201&h=134&c=7&o=7&rm=3')
-with open(r'D:\Data Science\Heart_Disease_Classification_Model\lr_model.pkl','rb') as f:
+st.image('https://www.shutterstock.com/image-vector/abstract-blue-human-heart-red-600nw-2526983201.jpg')
+
+with open('heart_disease_pred.pkl','rb') as f:
     chatgpt = pickle.load(f)
 
 # Load data
-url = r'''D:\Data Science\Heart_Disease_Classification_Model\Source\heart.csv'''
+url = '''https://github.com/ankitmisk/Heart_Disease_Prediction_ML_Model/blob/main/heart.csv?raw=true'''
 df = pd.read_csv(url)
 
 
@@ -47,7 +48,7 @@ all_values = []
 for i in df.iloc[:,:-1]:
     min_value, max_value = df[i].agg(['min','max'])
 
-    var =st.sidebar.slider(f'Select {i} value', int(min_value), int(max_value),
+    var =st.sidebar.slider(f'Select {i} value', int(min_value), int(max_value), 
                       random.randint(int(min_value),int(max_value)))
 
     all_values.append(var)
@@ -57,10 +58,10 @@ final_value = [all_values]
 ans = chatgpt.predict(final_value)[0]
 
 import time
-
+random.seed(132)
 progress_bar = st.progress(0)
 placeholder = st.empty()
-placeholder.subheader('Predicting Heart Disease')
+placeholder.subheader('Predicting Heart Disease') 
 
 place = st.empty()
 place.image('https://i.makeagif.com/media/1-17-2024/dw-jXM.gif',width = 200)
@@ -83,5 +84,4 @@ else:
     progress_bar = st.progress(0)
 
 
-
-
+st.markdown('Designed by: **Ankit Mishra**')
