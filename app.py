@@ -23,7 +23,9 @@ Algorithms Used:
 - Artificial Neural Network (1 Hidden Layer, Keras)'''
 
 # Path to the .pkl file inside ml_model
-model_path = os.path.join(os.path.dirname(__file__),"Heart_Disease_Classification_Model", "lr_model.pkl")
+# Path to the .pkl file in the same folder
+model_path = os.path.join(os.path.dirname(__file__), "lr_model.pkl")
+
 
 # Load the model
 with open(model_path, "rb") as f:
